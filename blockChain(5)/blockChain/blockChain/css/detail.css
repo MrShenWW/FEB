@@ -1,0 +1,107 @@
+#detail{
+    margin: 18px 5px;
+    background: #fff;
+    width: auto;
+    margin-top: 95px;
+    padding-top: 0px;
+    padding-bottom: 0px; 
+    box-shadow: 2px 2px 8px #9a9a9b;
+}
+#detail .detail{
+    min-height: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.top_title{
+    position: relative;
+    min-height: 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.navbar-hidden{
+    display: none;
+}
+.top_title h1{
+    font-size: 34px;
+    line-height: 66px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.top_title .rl{
+    border-bottom: 1px solid #eaeaea;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+}
+#detail .detail .content{
+    padding: 20px 40px 40px;
+}
+/* 下一篇 */
+.next_article {
+    background: #fff;
+}
+.next_article .top_title{
+    min-height: 50px;
+    padding: 15px 40px 0;
+}
+.next_article .top_title p{
+    font-size: 14px;
+    color: #9a9a9b;
+    padding: 30px 0;
+    cursor: pointer;
+}
+.next_article .top_title span{
+    font-size: 14px;
+    cursor:pointer;
+}
+.next_article .top_title .title:hover{
+    color:#ed952a;
+}
+@media (max-width: 768px){
+    #detail{
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    .top_title h1{
+        line-height: 24px;
+        font-size: 18px;
+    }
+    .detail .top_title {
+        padding: 10px;
+    }
+    .top_title{
+        min-height: 90px;
+        padding: 10px 20px;
+    }
+    .top_title .rl{
+        display: none;
+    }
+    .rl_small{
+        display: block;
+        margin-top: 10px;
+        border-bottom: 1px solid #eaeaea;
+    }
+    .rl_small span{
+        display: block;
+        line-height: 26px;
+        color: #9a9a9b;
+        font-size: 14px;
+    }
+    .rl_small span img{
+        vertical-align: sub;
+    }
+    .rl span{
+        display: block;
+    }
+    #detail .detail {
+        padding: 20px;
+    }
+    #detail .detail .content{
+        padding: 0;
+    }
+}

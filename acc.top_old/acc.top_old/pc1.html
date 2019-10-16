@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title data-localize="hpt.BANNER-TITLE">EtToken Official website</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.localize.js"></script>
+    <script src="js/language_cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap-maizi.css" />
+    <link rel="stylesheet" href="css/taiyi.css">
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./矢量智能对象@2x.png">
+    <style>
+        html {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+
+            margin: 0;
+            padding: 0;
+            min-width: 1010px;
+            width: 100%;
+            /*position: absolute;*/
+            /*border-bottom: #00003F 50px solid;*/
+        }
+
+        .navbar-text .wow .fadeInRight .animated {
+            line-height: 2.6;
+        }
+
+
+        canvas {
+            position: absolute;
+            margin-top: 2%;
+            margin-left: 740px;
+        }
+
+        .container-fluid {
+
+            width: 100%;
+
+            color: rgba(255, 255, 255, 0.8);
+            background-color: #00003F;
+        }
+        /*****  头部样式开始 *****/
+
+        .w_nav {
+            position: fixed;
+
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 60px;
+            background-color: #00004A;
+        }
+
+        .main {
+            margin-top: 2%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .comment {
+            max-width: 1290px;
+            width: 1290px;
+            /*width: 80%;*/
+            height: 100%;
+            margin: 0 auto;
+        }
+
+
+        #footer {
+            background-color: aquamarine;
+            width: 100%;
+            height: 5%;
+
+            margin-bottom: 0;
+        }
+
+        .box {
+            float: right;
+            width: 90%;
+            margin-top: 18px;
+            text-align: right;
+        }
+
+        .box a {
+            text-decoration: none;
+            /* height: 100%; */
+            padding-bottom: 16px;
+            color: #fff;
+            font-size: 16px;
+            width: 105px;
+            display: inline-block;
+        }
+
+        .box a:hover {
+            border-bottom: 2px solid #ffffff;
+        }
+
+        .main #main1 {
+            width: 100%;
+            height: 540px;
+            margin-top: 2%;
+
+            background: #00004A;
+        }
+
+        .myBtn1 {
+            width: 122px;
+            height: 32px;
+            border: 1px solid rgba(208, 152, 103, 1);
+            border-radius: 16px;
+            padding-top: 1%;
+            font-size: 11px;
+        }
+
+        .text-r {
+            text-align: left;
+        }
+
+        .text-l {
+            text-align: left;
+        }
+
+
+        .btn:hover {
+            background-color: rgba(208, 152, 103, 1);
+            color: white;
+        }
+
+        .main .main2 {
+            width: 100%;
+            background: linear-gradient(90deg, rgba(0, 0, 107, 1) 0%, rgba(0, 0, 74, 1) 67%);
+            background-size: 100% 100%;
+            height: 480px;
+        }
+
+        .main .main3 {
+            height: 480px;
+            width: 100%;
+
+            margin: 0 auto;
+            background: linear-gradient(90deg, rgba(0, 0, 74, 1) 54%, rgba(0, 0, 107, 1) 100%);
+            background-size: 100% 100%;
+        }
+
+        .main3_1 {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        .main3_1 img {
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+        #main3_2 {
+            float: right;
+            width: 50%;
+            height: 100%;
+            background: url("./images/千库网6@2x.png");
+            background-position: center 0;
+            background-repeat: no-repeat;
+
+            background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -ms-background-size: cover;
+        }
+
+        .main5 {
+
+            height: 480px;
+            background: linear-gradient(90deg, rgba(0, 0, 74, 1) 0%, rgba(0, 0, 107, 1) 47%);
+            width: 100%;
+            padding-bottom: 100px;
+        }
+
+        #main5 {
+            padding-top: 62px;
+            height: 480px;
+            background: linear-gradient(90deg, rgba(0, 0, 74, 1) 0%, rgba(0, 0, 107, 1) 47%);
+            width: 100%;
+            padding-bottom: 70px;
+        }
+
+        #main6 {
+            width: 100%;
+            height: 550px;
+            background: linear-gradient(90deg, rgba(0, 0, 74, 1) 0%, rgba(0, 0, 107, 1) 100%);
+        }
+
+        .ditu {
+            width: 50%;
+        }
+
+        .footer {
+
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            bottom: 0;
+            height: 100px;
+            background-color: #00003F;
+        }
+
+        .downLoad-btn:hover {
+            background: rgba(208, 152, 103, 1) !important;
+        }
+
+        .line {
+            display: none;
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            bottom: -10px;
+            right: 165px;
+            transform: translateX(50%);
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--导航-->
+        <div class="w_nav">
+
+            <div class="comment">
+                <div class="logo" style="width: 10%;float: left;margin-top: 15px"><img class="img-responsive" src="images/组 1@2x.png" style="height: 40px" alt=""></div>
+                <div class="box" style="text-align: center;width: 90%;position: relative">
+                    <a data-localize="hpt.NAV-2" href="./pc1.html?#main2_1">EtToken describe</a>
+                    <a
+                        data-localize="hpt.NAV-3" href="./pc1.html?#main5">EtToken advantage</a><a data-localize="hpt.NAV-4" href="./pc1.html?#main6"> ET</a><a style="cursor: pointer" data-localize="hpt.NAV-5" onclick="window.open('./ETtoken白皮书.pdf')">white paper</a>
+                        <div style="display: inline-block;position: relative;width: 60px;float:right;">
+                            <p data-localize="hpt.NAV-6" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 16px;color: #fff;cursor: pointer;display: inline">
+                                language
+                            </p>
+                            <div style="display: inline">
+                                <b class="caret"></b>
+                            </div>
+                            <ul class="dropdown-menu" style="background-color: #00005B;width: 15%;">
+                                <li style="text-align: center;background-color: #fff">
+                                    <span data-localize="hpt.NAV-7" data-vale="en" onclick="chgLang(this)" style="text-align: center;cursor: pointer;color: #00005B;">English</span>
+                                </li>
+                                <li style="text-align: center;">
+                                    <a href="./pc.html"> <span data-localize="hpt.NAV-8" data-value="cn"
+                                        style="text-align: center;cursor: pointer;">Chinese</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="line"></div> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="main">
+            <div id="main1">
+                <div class="comment" style="margin: 0 auto;">
+                    <canvas id=c>当前浏览器不支持canvas，请更换浏览器使用！</canvas>
+                    <div style="position: relative;z-index: 1">
+
+                        <h1 data-localize="hpt.IMG10" style="padding-top: 125px;position: absolute;z-index: 3"><img style="visibility: hidden" src="images/asia (2).png" height="56" width="532" /></h1>
+                        <h2 data-localize="hpt.IMG11" class="img-responsive wow fadeInLeft animated" data-wow-delay="0.2s" style="padding-top: 140px;visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;margin-left: 0;padding-bottom: 25px;">
+                            <img src="images/asiaen (2).png" height="69" width="592" /></h2>
+                        <div>
+                            <p class="img-responsive wow fadeInLeft animated ppp" data-wow-delay="0.4s" style="width:60px;height:2px;background:rgba(255,255,255,1);border-radius:1px;margin-top: 40px;text-align: justify">
+                            </p>
+                        </div>
+                        <div data-localize="hpt.IMG12" class="img-responsive wow fadeInLeft animated" data-wow-delay="0.4s" style=" padding-top: 10px;text-align: left;visibility: visible; animation-delay: 0.6s">
+                        </div>
+                        <div style="margin-top: 40px;">
+                            <div class="img-responsive wow fadeInLeft animated" style="width: 800px;height: 40px">
+                                <div class="col-sm-6 text-left" style="padding-left: 0;">
+                                    <a href="https://cw.pub/ettoken" target="_blank" style="text-decoration: none">
+                                        <!--https://www.pgyer.com/ujcD-->
+                                        <!--<a class="xiazai" >-->
+                                        <span class="btn btn-lg downLoad-btn" style="justify-content: center;font-size: 12px;display: flex;align-items: center;padding:5px 20px;min-width: 122px;height:32px;border:1px solid rgba(208,152,103,1);border-radius:16px;background: #00003F;">
+                                            <i class="fa fa-apple fa-lg" style=" color: white;margin-right: 5px;"></i>
+                                            <span data-localize="hpt.MAIN1-4" style="color: white;font-size: 11px">iOS
+                                                download</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 text-right" style="padding-left: 0;">
+                                    <a href="https://cw.pub/ettoken" target="_blank" style="text-decoration: none">
+                                        <!--https://www.pgyer.com/ujcD-->
+                                        <!--<a class="xiazai" >-->
+                                        <span class="btn btn-lg downLoad-btn" style="justify-content: center;font-size: 12px;display: flex;align-items: center;padding:5px 10px;min-width: 122px;height:32px;border:1px solid rgba(208,152,103,1);border-radius:16px;background: #00003F    ">
+                                            <i class="fa fa-android fa-lg" style="color: white;margin: 5px"></i> <span
+                                                data-localize="hpt.MAIN1-5"
+                                                style=" color: white;font-size: 11px">Android download</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<button style="width:122px;height:32px;background:rgba(208,152,103,1);border-radius:16px;margin-left: 19px"></button>-->
+                        <!--<button style="width:122px;height:32px;background:rgba(208,152,103,1);border-radius:16px;float: right;margin-left: 80px"></button>-->
+                    </div>
+                </div>
+
+                <div class="main2">
+                    <div class="comment">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s" id='main2_1'>
+                            <div class="ditu">
+                                <img class="img-responsive wow fadeIn animated" src="images/地图%20拷贝@2x.png" height="100%" width="100%" data-wow-delay="0.1s"
+                                    style="float: left;margin-left: 0;margin-top: 20%;visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;"
+                                />
+                            </div>
+                        </div>
+                        <div class="text" style="float: right;width: 50%;margin-top: 10%;height: 100%" >
+
+                            <h2 data-localize="hpt.MAIN2-1" class="img-responsive wow fadeInRight animated" data-wow-delay="0.2s" style=" color: #FFFFFF;font-family: PingFangSC-Medium;font-weight: bold;margin-left: 10%">
+                                EtToken brand interpretation</h2>
+                            <div style="height: 6%"></div>
+                            <p id="lineheight" data-localize="hpt.MAIN2-2" class="navbar-text  wow fadeInRight animated" data-wow-delay="0.4s" style="font-family:PingFangSC-Regular ;font-size: 13px;width: 100%;padding-left: 10%;">
+                                There are many chaos in today's market. As the top decentralized exchange, EtToken will create a more transparent, safer
+                                and more liquid digital asset trading platform. Unlike existing exchanges on the market,
+                                EtToken will reinterpret the market and change the market with its deep understanding of
+                                the blockchain industry to provide the ultimate service to users. <br /> 
+                               In the end, EtToken will re-interpret the blockchain industry with practical actions
+                                to create a safe, stable, convenient and comprehensive blockchain industry ecosystem.
+                            </p>
+                            <h3 data-localize="hpt.MAIN2-3" class="img-responsive wow fadeInRight animated" data-wow-delay="0.6s" style="margin-top: 40%; margin-left: 10%;font-weight: bold ;color: #ffffff">
+                                Introduction to the core functions of EtToken
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="main22" style="position:relative;z-index: 1;height: 500px;background: linear-gradient(90deg,rgba(0,0,107,1) 0%,rgba(0,0,74,1) 67%);min-width: 1010px">
+                    <div id="a">
+                        <img class="img-responsive" src="images/Layer 7.png" style="width: 100%;height: 100%;" />
+                    </div>
+                    <div id="b" style="z-index: 2 ;position: absolute;top:5%; left:25%;height: 100%">
+                        <h1 data-localize="hpt.IMG1"> <img class="img-responsive wow fadeIn animated" data-wow-delay="0.6s" src="images/组 9@2x (8).png"
+                                height="80%" width="80%" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn"
+                                alt="about" />
+                        </h1>
+                        <p style="padding-top: 24px;line-height: 2.5;text-align: center; width:1200px;margin: auto;font-size: 12px;text-align: left">
+                            The EtToken core platform will cover PC, MAC, IOS, Android, H5 and includes:Spot Trading、Contract transaction、 Monetary management、OTC、Global
+                            market、Latest News、community
+                        </p>
+                    </div>
+                </div>
+                <div class="main3">
+                    <div class="comment">
+                        <div class="main3_1">
+                            <img class="img-responsive wow fadeIn animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;padding: 0"
+                                src="images/组%209@2x%20(2).png" height="90%" width="80%" />
+                        </div>
+                        <div id="main3_2">
+                            <h1 data-localize="hpt.MAIN3-1" class="img-responsive wow fadeInRight animated" style="font-size: 19px;font-family: PingFangSC-Medium;font-weight: bold;margin-top: 10%;margin-left: 10%;color: white">
+                                EtToken profit method</h1>
+                            <div style="margin-left: 10%;width: 100%;height: 50%;margin-top: 5%">
+                                <ul style="width: 100%;height: 100%;visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;" class="img-responsive wow fadeIn animated">
+                                    <li style="height: 20%" class="img-responsive wow fadeInRight animated" data-wow-delay="0.1s">
+                                        <div style="width: 10%;height: 100%;float: left;margin-top: 2%"><img class="img-responsive" src="images/组%209@2x%20(3).png" height="100%" width="70%"
+                                            /></div>
+                                        <div style="width: 90%;float: right">
+                                            <h6 data-localize="hpt.MAIN3-2" style="color: white;padding-top: 2%">
+                                                Transaction fee
+                                            </h6>
+                                            <p data-localize="hpt.MAIN3-3" style=" font-size: 9pt;padding-top: 1%">
+                                                When the user conducts digital currency trading, he/she needs to pay a certain percentage of the handling fee to the platform.
+                                                In the later stage, different commission fees will be set according to operational
+                                                needs and user historical transaction levels.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="img-responsive wow fadeInRight animated" data-wow-delay="0.2s" style="height: 20%;margin-top: 2%">
+                                        <div style="width: 10%;height: 100%;float: left;margin-top: 2%">
+                                            <img class="img-responsive" src="images/组%209@2x%20(4).png" height="100%" width="70%" /></div>
+
+                                        <div style="width: 90%;float: right">
+                                            <h6 data-localize="hpt.MAIN3-4" style="color: white;padding-top: 2%">Cash withdrawal fee
+                                            </h6>
+                                            <p data-localize="hpt.MAIN3-3" style=" font-size: 9pt;padding-top: 1%">
+                                                The digital currency is required to pay a certain amount of withdrawal fee for the platform.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="img-responsive wow fadeInRight animated" data-wow-delay="0.3s" style="height: 20%;margin-top: 2%">
+                                        <div style="width: 10%;height: 100%;float: left;margin-top: 2%"><img class="img-responsive" src="images/组%209@2x%20(5).png" height="100%" width="70%"
+                                            /></div>
+
+                                        <div style="width: 90%;float: right">
+                                            <h6 data-localize="hpt.MAIN3-6" style="color: white;padding-top: 2%"> Member service fee
+                                            </h6>
+                                            <p data-localize="hpt.MAIN3-3" style=" font-size: 9pt;padding-top: 1%">
+                                                The user purchases the platform member service to obtain the transaction fee discount and value-added service, which serves
+                                                as the operation means to lock the user.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="img-responsive wow fadeInRight animated" data-wow-delay="0.4s" style="height: 20%;margin-top: 2%">
+                                        <div style="width: 10%;height: 100%;float: left;margin-top: 2%"><img class="img-responsive" src="images/组%209@2x%20(6).png" height="100%" width="70%"
+                                            /></div>
+
+                                        <div style="width: 90%;float: right">
+                                            <h6 data-localize="hpt.MAIN3-8" style="color: white;padding-top: 2%">Credit card fee
+                                            </h6>
+                                            <p data-localize="hpt.MAIN3-3" style=" font-size: 9pt;padding-top: 1%">
+                                                The platform will launch some high-quality digital currency as the transaction target from time to time, and charge a certain
+                                                amount of the foreign currency fee.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="img-responsive wow fadeInRight animated" data-wow-delay="0.4s" style="height: 20%;margin-top: 2%">
+                                        <div style="width: 10%;height: 100%;float: left;margin-top: 2%"><img class="img-responsive" src="images/组 12@2x (4).png" height="100%" width="70%"
+                                            /></div>
+                                        <div style="width: 90%;float: right">
+                                            <h6 data-localize="hpt.MAIN3-8" style="color: white;padding-top: 2%">
+                                                Leverage fee
+                                            </h6>
+                                            <p data-localize="hpt.MAIN3-3" style=" font-size: 9pt;padding-top: 1%">
+                                                The platform will go online with the futures trading function, support leveraged transactions, and charge users a certain
+                                                percentage of fees.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="main5">
+                    <div class="comment">
+                        <div id="main5_1" style="width: 50%;float: left;height: 100%">
+                            <h3 data-localize="hpt.MAIN5-1" class="img-responsive wow fadeIn animated" data-wow-delay="0.3s" style="color: white">EtToken advantage</h3>
+                            <div style="margin-top: 10%">
+                                <h1 data-localize="hpt.IMG2"> <img class="img-responsive wow zoomIn animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;"
+                                        src="images/组 11@2x (2).png" height="100%" width="100%" /></h1>
+                            </div>
+
+                        </div>
+                        <div class="main5_2" style="width: 50%;float: right;height: 100%">
+                            <img class="img-responsive wow zoomIn animated" src="images/图层%207@2x.png" height="100%" width="50%" style=" animation-delay: 0.1s;margin-top: 11%;margin-left: 40%"
+                                alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="main5">
+                    <div class="comment" style="width: 40%;margin-left: 10%;float: left">
+                        <div class="main5_1" style="width: 100%;float: left;height: 100%;text-align: right">
+                            <div style="padding-top: 5%;padding-bottom: 8%;">
+                                <img class="img-responsive wow zoomIn animated" data-wow-delay="0.6s" src="images/矢量智能对象@2x%20(1).png" height="100%" width="80%"
+                                /></div>
+                        </div>
+                    </div>
+                    <div class="main5_2" style="width: 50%;height: 100%;float: right">
+                        <h4 data-localize="hpt.MAIN5-2" style="position: absolute;z-index: 5;font-size: 20px;color: white">ET access route</h4>
+                        <h1 data-localize="hpt.IMG3"> <img class="img-responsive wow zoomIn animated" data-wow-delay="0.6s" style="position :relative;z-index:4;visibility: visible; animation-delay: 0.6s;margin-left: 0;padding-top: 50px;"
+                                src="images/组 12@2x (3).png" height="55%" width="55%" />
+                        </h1>
+                    </div>
+                </div>
+                <div id="main6">
+                    <div class="comment" style="padding-top:40px;">
+                        <div style="width: 60%;padding-bottom: 1%;float: left;padding-right:30px;letter-spacing: 1px" class="img-responsive wow fadeInLeft animated"
+                            data-wow-delay="0.3s">
+                            <div style="width: 100%;height: 10%;color: white">
+                                <h2 data-localize="hpt.MAIN6-1" style="margin-top: 50px;margin-bottom: 15px;font-size: 24px;">What is ET?</h2>
+                            </div>
+                            <div style="width: 100%;height:90px;margin-top: 24px;" class="img-responsive wow fadeInLeft animated" data-wow-delay="0.1s">
+                                <h5 data-localize="hpt.MAIN6-2" style="color: white;font-size: 14px;line-height: 28px;">
+                                    EtToken is committed to being the leading global community-based digital asset trading platform. The token ET promoted by
+                                    the EtToken platform has a total issued amount of 100 million, and is guaranteed to never
+                                    be issued. ET will serve as the blood of the entire platform and will be distributed
+                                    throughout the platform. In the future, ET will participate in more platform ecological
+                                    construction and contribute to the benign development of the platform.
+                                </h5>
+                                <p data-localize="hpt.MAIN6-3" class="navbar-text" style="font-size: 13px;text-align: justify">
+
+                                </p>
+                            </div>
+                            <!-- <div style="width: 100%;height:90px;margin-top: 24px"
+                                class="img-responsive wow fadeInLeft animated" data-wow-delay="0.2s">
+                                <h5 data-localize="hpt.MAIN6-4" style="color: white;font-size: 18px">贡献奖励ET：</h5>
+                                <p data-localize="hpt.MAIN6-5" class="navbar-text"
+                                    style="font-size: 13px;text-align: justify">
+                                    邀请新用户，社区内容贡献，产品体验建议。
+                                </p>
+                            </div>
+                            <div style="width: 100%;height:90px;margin-top: 24px"
+                                class="img-responsive wow fadeInLeft animated" data-wow-delay="0.3s">
+                                <h5 data-localize="hpt.MAIN6-6" style="color: white;font-size: 18px">市场活动获得ET：</h5>
+                                <p data-localize="hpt.MAIN6-7" class="navbar-text"
+                                    style="font-size: 13px;text-align: justify">
+                                    糖果派送，抽奖，空投等方式获赠ET。
+                                </p>
+                            </div>
+                            <div style="width: 100%;height:90px;margin-top: 24px"
+                                class="img-responsive wow fadeInLeft animated" data-wow-delay="0.3s">
+                                <h5 data-localize="hpt.MAIN6-6" style="color: white;font-size: 18px">参与节点销售获得ET：</h5>
+                                <p data-localize="hpt.MAIN6-7" class="navbar-text"
+                                    style="font-size: 13px;text-align: justify">
+                                    用户可利用手中其他数字货币获得ET。
+                                </p>
+                            </div> -->
+                        </div>
+                        <div style="width: 35%;float: right;height: 100%;text-align: right;padding-top: 20px;">
+                            <img class="img-responsive" src="images/组 12 (2).png" style="height: 50%" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="comment" style="display: flex;
+    align-items: center;">
+            <div class="logo" style="width: 30% ;float: left;"><img class="img-responsive" src="images/组 1@2x.png" alt=""></div>
+            <div class="box" style="padding-left: 0;margin: 0;text-align:center">
+                <a data-localize="hpt.FOOT-1" style="margin-left: 5%;cursor: pointer;">Common tools</a>
+                <a data-localize="hpt.FOOT-2" style="margin-left: 5%;cursor: pointer;">Functional Links</a>
+                <a data-localize="hpt.FOOT-3" style="margin-left: 5%;cursor: pointer;">User Support</a>
+                <a data-localize="hpt.FOOT-4" style="margin-left: 5%;cursor: pointer;">Contact us</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/imagesloaded.min.js"></script>
+
+<script>
+    $(function () {
+        new WOW().init();
+    })
+
+</script>
+<script>
+    $(".w_nav .box a").hover(function () {
+        console.log($(this).index());
+        var length = 666;
+        var right = length - $(this).index() * 111 - 62
+        $('.line').show()
+        $('.line').css('right', right + 'px')
+    }, function () {
+
+    })
+    $(".w_nav .box").hover(function () {
+
+    }, function () {
+        $('.line').hide()
+    })
+
+</script>
+<script type="text/JavaScript">
+    $(document).ready(function() { $('a[href*=#],area[href*=#]').click(function() { if (location.pathname.replace(/^\//, '')
+    == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) { var $target = $(this.hash); $target = $target.length
+    && $target || $('[name=' + this.hash.slice(1) + ']'); if ($target.length) { var targetOffset = $target.offset().top;
+    $('html,body').animate({ scrollTop: targetOffset }, 1000); return false; } } }); });
+</script>
+<script>
+    var s = c.width = c.height = 500,
+        ctx = c.getContext('2d'),
+
+        opts = {
+            globeRadius: 150,
+            depth: 300,
+            focalLength: 350,
+            center: s / 2,
+
+            rotYVel: .01,
+            baseXRot: -0.41, // 23.5 deg
+            afterYRot: -2, //Math.PI / 2,
+        },
+
+        rot = {
+            y: {
+                cos: Math.cos(opts.rotYVel),
+                sin: Math.sin(opts.rotYVel)
+            },
+            z: {
+                cos: Math.cos(opts.baseXRot),
+                sin: Math.sin(opts.baseXRot)
+            },
+            ay: {
+                cos: Math.cos(opts.afterYRot),
+                sin: Math.sin(opts.afterYRot)
+            }
+        };
+
+    function anim() {
+
+        window.requestAnimationFrame(anim);
+
+        ctx.fillStyle = '#00004A';
+        ctx.fillRect(0, 0, s, s);
+
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 2;
+
+        ctx.beginPath();
+
+        for (var i = 0; i < lines.length; ++i) {
+
+            var points = lines[i];
+
+            for (var j = 0; j < points.length; ++j) {
+
+                var point = points[j],
+                    x = point.x,
+                    y = point.y,
+                    z = point.z;
+
+                var X = x;
+                x = x * rot.y.cos - z * rot.y.sin;
+                z = z * rot.y.cos + X * rot.y.sin;
+
+                point.x = x;
+                point.z = z;
+
+                var Y = y;
+                y = y * rot.z.cos - x * rot.z.sin;
+                x = x * rot.z.cos + Y * rot.z.sin;
+
+                X = x;
+                x = x * rot.ay.cos - z * rot.ay.sin;
+                z = z * rot.ay.cos + X * rot.ay.sin;
+
+                z += opts.depth;
+
+                var scale = opts.focalLength / z,
+                    sx = opts.center + scale * x,
+                    sy = opts.center + scale * y;
+
+                point.sx = sx;
+                point.sy = sy;
+
+                //if( z < opts.depth )
+                ctx[j === 0 ? 'moveTo' : 'lineTo'](sx, sy);
+            }
+
+            // to prevent it from recalculating position of starting point twice but still closing the path
+            //if( points[ 0 ].z < opts.depth )
+            ctx.lineTo(points[0].sx, points[0].sy);
+        }
+
+        ctx.stroke();
+
+        //ctx.fillStyle = 'green';
+        //ctx.fill();
+
+    };
+
+    function reparseLines() {
+
+        // the lines will just have indications for angles
+
+        for (var i = 0; i < lines.length; ++i) {
+
+            var points = [];
+            for (var j = 0; j < lines[i].length; j += 2) {
+
+                var sinA = Math.sin(lines[i][j] * Math.PI),
+                    cosA = Math.cos(lines[i][j] * Math.PI),
+                    sinB = Math.sin(lines[i][j + 1] * Math.PI / 2),
+                    cosB = Math.cos(lines[i][j + 1] * Math.PI / 2);
+
+                points.push({
+                    x: opts.globeRadius * cosA * cosB,
+                    y: opts.globeRadius * sinB,
+                    z: opts.globeRadius * sinA * cosB
+                });
+            }
+
+            lines[i] = points;
+        }
+    }
+
+    // each point is 2 angles in half turns
+    // a, x[-1,1] = vertical circle
+    // x[-1,1], .5 = equator
+    // x[-1,1], a = parallel cirles at a
+    var lines = [
+        // africa main continent
+        [-.04, -.05,
+            .01, -.05,
+            .02, -.07,
+            .06, -.03,
+            .05, .03,
+            .08, .12,
+            .06, .18,
+            .08, .25,
+            .10, .35,
+            .10, .39,
+            .15, .37,
+            .18, .33,
+            .17, .28,
+            .19, .28,
+            .19, .23,
+            .22, .19,
+            .22, .06,
+            .27, -.033,
+            .29, -.15,
+            .23, -.13,
+            .175, -.33,
+            .12, -.36,
+            .1, -.32,
+            .06, -.36,
+            .06, -.405,
+            .01, -.39, -.03, -.38, -.05, -.35, -.08, -.28, -.08, -.205, -.088, -.15,
+        ],
+        // madagascar
+        [0.245, 0.192, 0.245, 0.233, 0.241, 0.267, 0.249, 0.3, 0.266, 0.275, 0.287, 0.175, 0.274, 0.142],
+        // antarctica
+        [-0.984, 0.892, -0.918, 0.875, -0.748, 0.825, -0.662, 0.817, -0.559, 0.842, -0.559, 0.792, -0.46, 0.825, -0.402, 0.825, -0.414, 0.775, -0.311, 0.692, -0.328, 0.75, -0.324, 0.808, -0.34, 0.825, -0.233, 0.883, -0.023, 0.783, 0.196, 0.783, 0.237, 0.75, 0.254, 0.758, 0.287, 0.725, 0.414, 0.767, 0.464, 0.733, 0.48, 0.733, 0.489, 0.783, 0.505, 0.717, 0.551, 0.725, 0.6, 0.742, 0.625, 0.717, 0.645, 0.758, 0.72, 0.758, 0.79, 0.742, 0.934, 0.783, 0.909, 0.833, 0.922, 0.867],
+        // south america
+        [-0.427, -0.067, -0.39, -0.142, -0.373, -0.108, -0.373, -0.083, -0.332, -0.125, -0.291, -0.067, -0.282, -0.008, -0.188, 0.075, -0.192, 0.108, -0.212, 0.133, -0.208, 0.217, -0.229, 0.258, -0.254, 0.258, -0.262, 0.283, -0.262, 0.333, -0.287, 0.383, -0.303, 0.383, -0.303, 0.425, -0.336, 0.433, -0.348, 0.458, -0.344, 0.475, -0.369, 0.5, -0.361, 0.525, -0.373, 0.55, -0.357, 0.6, -0.394, 0.6, -0.402, 0.542, -0.394, 0.492, -0.41, 0.433, -0.394, 0.392, -0.406, 0.35, -0.39, 0.308, -0.39, 0.25, -0.381, 0.225, -0.419, 0.15, -0.419, 0.1, -0.456, 0.058, -0.435, 0.025, -0.435, -0.008, -0.427, -0.008, -0.427, -0.058],
+        // that south american island in the south
+        [-0.336, 0.575, -0.307, 0.575, -0.311, 0.6, -0.328, 0.6],
+        // north 'murica
+        [-0.435, -0.067, -0.456, -0.075, -0.493, -0.15, -0.505, -0.15, -0.526, -0.192, -0.571, -0.192, -0.629, -0.358, -0.604, -0.258, -0.641, -0.308, -0.641, -0.333, -0.687, -0.45, -0.674, -0.533, -0.707, -0.6, -0.72, -0.575, -0.736, -0.617, -0.814, -0.692, -0.847, -0.625, -0.889, -0.608, -0.893, -0.658, -0.905, -0.675, -0.905, -0.717, -0.88, -0.733, -0.909, -0.742, -0.946, -0.742, -0.975, -0.775, -0.955, -0.792, -0.926, -0.758, -0.893, -0.792, -0.703, -0.792, -0.654, -0.808, -0.621, -0.75, -0.522, -0.758, -0.497, -0.792, -0.456, -0.775, -0.39, -0.725, -0.472, -0.75, -0.431, -0.708, -0.476, -0.708, -0.513, -0.667, -0.456, -0.625, -0.435, -0.55, -0.435, -0.617, -0.414, -0.617, -0.435, -0.7, -0.406, -0.7, -0.377, -0.642, -0.353, -0.675, -0.307, -0.592, -0.307, -0.558, -0.373, -0.567, -0.291, -0.55, -0.282, -0.525, -0.344, -0.492, -0.353, -0.517, -0.402, -0.45, -0.419, -0.392, -0.435, -0.35, -0.427, -0.275, -0.447, -0.283, -0.472, -0.333, -0.48, -0.325, -0.526, -0.325, -0.53, -0.233, -0.493, -0.2, -0.485, -0.225, -0.468, -0.225, -0.48, -0.2, -0.468, -0.167, -0.452, -0.167, -0.452, -0.108],
+        // cuba
+        [-0.464, -0.242, -0.443, -0.25, -0.41, -0.233, -0.414, -0.2, -0.435, -0.242],
+        // greenland
+        [-0.373, -0.883, -0.365, -0.833, -0.32, -0.85, -0.282, -0.783, -0.295, -0.758, -0.262, -0.667, -0.229, -0.667, -0.229, -0.708, -0.208, -0.742, -0.163, -0.767, -0.113, -0.8, -0.105, -0.825, -0.093, -0.883, -0.064, -0.917, -0.13, -0.917, -0.204, -0.942, -0.282, -0.917, -0.353, -0.917],
+        // iceland
+        [-0.134, -0.742, -0.093, -0.733, -0.08, -0.7, -0.089, -0.683, -0.118, -0.683, -0.13, -0.708],
+        // eurasia
+        [-0.006, -0.492, -0.043, -0.475, -0.047, -0.408, -0.035, -0.408, -0.023, -0.4, -0.006, -0.425, 0.014, -0.458, 0.014, -0.475, 0.052, -0.483, 0.072, -0.458, 0.093, -0.442, 0.093, -0.417, 0.101, -0.425, 0.105, -0.425, 0.085, -0.467, 0.072, -0.492, 0.072, -0.5, 0.08, -0.5, 0.113, -0.458, 0.113, -0.442, 0.126, -0.4, 0.134, -0.433, 0.134, -0.45, 0.155, -0.45, 0.159, -0.4, 0.171, -0.4, 0.184, -0.417, 0.188, -0.375, 0.2, -0.408, 0.204, -0.4, 0.2, -0.367, 0.188, -0.342, 0.221, -0.225, 0.241, -0.183, 0.237, -0.15, 0.266, -0.158, 0.311, -0.2, 0.332, -0.242, 0.311, -0.275, 0.299, -0.258, 0.278, -0.308, 0.278, -0.325, 0.299, -0.292, 0.32, -0.292, 0.324, -0.275, 0.369, -0.283, 0.39, -0.225, 0.41, -0.25, 0.41, -0.2, 0.427, -0.083, 0.443, -0.117, 0.443, -0.167, 0.48, -0.225, 0.505, -0.242, 0.526, -0.15, 0.538, -0.175, 0.542, -0.108, 0.567, -0.15, 0.592, -0.1, 0.608, -0.117, 0.608, -0.175, 0.584, -0.192, 0.596, -0.233, 0.604, -0.192, 0.621, -0.233, 0.654, -0.267, 0.678, -0.342, 0.666, -0.392, 0.678, -0.442, 0.695, -0.4, 0.724, -0.425, 0.711, -0.442, 0.724, -0.475, 0.748, -0.475, 0.773, -0.542, 0.753, -0.617, 0.781, -0.65, 0.847, -0.667, 0.864, -0.692, 0.885, -0.692, 0.864, -0.633, 0.864, -0.55, 0.897, -0.608, 0.901, -0.65, 0.897, -0.683, 0.951, -0.683, 0.984, -0.708, 0.975, -0.733, 0.988, -0.783, 0.897, -0.783, 0.885, -0.783, 0.827, -0.783, 0.794, -0.817, 0.753, -0.792, 0.728, -0.8, 0.707, -0.825, 0.67, -0.8, 0.592, -0.792, 0.633, -0.85, 0.592, -0.85, 0.534, -0.917, 0.509, -0.883, 0.551, -0.867, 0.464, -0.833, 0.439, -0.817, 0.406, -0.8, 0.369, -0.783, 0.398, -0.792, 0.402, -0.75, 0.39, -0.75, 0.332, -0.783, 0.32, -0.8, 0.39, -0.858, 0.315, -0.867, 0.291, -0.808, 0.328, -0.775, 0.266, -0.75, 0.237, -0.733, 0.208, -0.692, 0.188, -0.733, 0.221, -0.733, 0.212, -0.767, 0.192, -0.767, 0.151, -0.808, 0.093, -0.767, 0.068, -0.708, 0.035, -0.708, 0.035, -0.65, 0.06, -0.65, 0.072, -0.633, 0.093, -0.633, 0.105, -0.692, 0.134, -0.725, 0.122, -0.683, 0.159, -0.675, 0.126, -0.65, 0.109, -0.583, 0.064, -0.6, 0.064, -0.642, 0.047, -0.642, 0.052, -0.6, 0.023, -0.567, -0.019, -0.567],
+        // japan
+        [0.72, -0.383, 0.769, -0.408, 0.777, -0.467, 0.786, -0.517, 0.777, -0.567, 0.798, -0.583, 0.786, -0.542, 0.81, -0.458, 0.786, -0.458, 0.786, -0.408, 0.748, -0.358, 0.736, -0.358, 0.724, -0.325],
+        // ailarts'
+        [0.781, 0.2, 0.753, 0.183, 0.757, 0.142, 0.736, 0.142, 0.715, 0.183, 0.707, 0.158, 0.687, 0.2, 0.637, 0.25, 0.625, 0.308, 0.641, 0.35, 0.637, 0.4, 0.67, 0.383, 0.687, 0.375, 0.728, 0.342, 0.753, 0.392, 0.765, 0.367, 0.777, 0.417, 0.806, 0.425, 0.827, 0.425, 0.847, 0.317, 0.806, 0.2, 0.802, 0.158, 0.786, 0.133],
+        // philippines, papua new guinea and other islands
+        [0.555, -0.075, 0.571, -0.05, 0.571, 0, 0.596, 0.025, 0.596, 0.058, 0.645, 0.092, 0.703, 0.092, 0.592, 0.092, 0.555, 0.025, 0.555, -0.008, 0.53, -0.05, 0.559, -0.033],
+        [0.649, -0.067, 0.654, -0.033, 0.662, -0.017, 0.645, 0.05, 0.625, 0.033, 0.604, -0.008, 0.645, -0.067],
+        [0.67, -0.2, 0.658, -0.175, 0.666, -0.125, 0.649, -0.083, 0.678, -0.117, 0.678, -0.083, 0.695, -0.05, 0.695, -0.117, 0.678, -0.158],
+        [0.695, 0.05, 0.724, 0.042, 0.753, 0.05, 0.761, 0.092, 0.781, 0.092, 0.81, 0.092, 0.831, 0.125, 0.814, 0.083, 0.843, 0.025, 0.81, 0.058, 0.773, 0.025, 0.748, 0.042],
+        [0.81, 0.467, 0.802, 0.483, 0.814, 0.517, 0.827, 0.475],
+        [0.951, 0.4, 0.963, 0.45, 0.922, 0.5, 0.942, 0.533, 0.942, 0.5, 0.959, 0.492, 0.979, 0.433],
+        [0.909, 0.242, 0.926, 0.267],
+        [0.975, 0.192, 0.992, 0.208],
+        [0.06, -0.875, 0.101, -0.842, 0.134, -0.842, 0.155, -0.9],
+        // "great" britain
+        [-0.019, -0.65, 0.002, -0.608, -0.014, -0.608, -0.039, -0.633],
+        [-0.043, -0.583, -0.043, -0.575, -0.023, -0.567],
+        // isle of the easter heads
+        [-0.86, -0.208, -0.847, -0.183]
+    ];
+
+    // debugging purposes
+    /* var deCanvas = document.createElement( 'canvas' ),
+            deCtx = deCanvas.getContext( '2d' ),
+
+            deW = deCanvas.width = 485,
+            deH = deCanvas.height = 240;
+
+    deCanvas.className =  'debug-canvas';
+
+    document.body.appendChild( deCanvas );
+
+    deCtx.strokeStyle = 'green';
+    deCtx.lineWidth = 3;
+    deCtx.beginPath();
+
+    for( var i = 0; i < lines.length; ++i ){
+
+        for( var j = 0; j < lines[ i ].length; j += 2 ){
+
+            var x = deW / 2 * ( 1 + lines[ i ][ j ] ),
+                    y = deH / 2 * ( 1 + lines[ i ][ j + 1 ] );
+
+            deCtx[ j === 0 ? 'moveTo' : 'lineTo' ]( x, y );
+        }
+
+        var x = deW / 2 * ( 1 + lines[ i ][ 0 ] ),
+              y = deH / 2 * ( 1 + lines[ i ][ 1 ] );
+
+        //deCtx.lineTo( x, y );
+    }
+
+    deCtx.stroke();
+
+    var clicks = []
+
+    deCanvas.addEventListener( 'click', function( e ){
+        var rect = deCanvas.getBoundingClientRect();
+
+        clicks.push( parseFloat( ( ( e.clientX - rect.left ) / deW * 2 - 1 ).toFixed(3) ), parseFloat( ( ( e.clientY - rect.top ) / deH * 2 - 1 ).toFixed(3) ) );
+
+        console.clear();
+        console.log( clicks );
+    }) */
+
+    reparseLines();
+    anim();
+
+</script>
+
+
+</html>

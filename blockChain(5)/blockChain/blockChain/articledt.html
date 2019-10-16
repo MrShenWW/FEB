@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>链客财经</title>
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+    <!-- 页头 -->
+    <div id="app" v-cloak>
+        <div style="width:100%;text-align:center;position:fixed;z-index:10000;color:#666;padding:5px 0px;font-size:12px;" class="tishi">
+            <span style="color:#f44b4b;font-size:12px;">*风险小贴士：</span>请谨防ICO、IEO等变相私募，链客财经平台所发表资讯不代表本公司任何的投资暗示。
+        </div>
+        <div id="index" class="navbar-top">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#" title="区块链">
+                        <img src="images/logo.png" alt="区块链">
+                    </a>
+                </div>
+                <ul class="navlist">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="newlist.html">快讯</a></li>
+                    <li class="active"><a href="information.html">资讯</a></li>
+                    <!-- <li><a href="activity.html">活动</a></li> -->
+                    <li><a href="websitenav.html">业务范围</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text">
+                    <span class="search-btn">
+                        <img src="images/search_1.png" alt=""> 搜索
+                    </span>
+                </div>
+            </div>
+            <div class="smallBar">
+                <div class="menu">
+                    <img src="images/menu.png" alt="">
+                    <div class="menuContent">
+                        <div class="menuList">
+                            <div class="logo" style="padding:0;">
+                                <a href="#" title="区块链">
+                                    <img src="images/logo.png" alt="区块链">
+                                </a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="index.html">首页</a>
+                                </li>
+                                <li>
+                                    <a href="newlist.html">快讯</a>
+                                </li>
+                                <li>
+                                    <a href="information.html">资讯</a>
+                                </li>
+                                <li>
+                                    <a href="activity.html">活动</a>
+                                </li>
+                                <li>
+                                    <a href="websitenav.html">业务范围</a>
+                                </li>
+                                <li>
+                                    <a href="search.html">搜索</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mark"></div>
+                </div>
+                <div class="logo">
+                    <a href="#" title="区块链">
+                        <img src="images/logo.png" alt="区块链">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="detail">
+            <div class="detail">
+                <div class="top_title">
+                    <h1>{{ obj.title }}</h1>
+                    <div class="rl">
+                        <!-- <span>来源:xxxoo</span> -->
+                        <span style="width:160px;">
+                            <img src="http://www.lianbihome.net/img/time_.png" alt=""> {{ obj.born_time }}
+                        </span>
+                        <!-- <span><img src="http://www.lianbihome.net/img/see_.png"> {{ obj.current.num }}</span> -->
+                    </div>
+                    <div class="rl_small">
+                        <!-- <span>来源:xxxoo</span> -->
+                        <span>
+                            <img src="http://www.lianbihome.net/img/time_.png" alt=""> {{ obj.born_time }}
+                        </span>
+                        <!-- <span><img src="http://www.lianbihome.net/img/see_.png"> {{ obj.current.num }}</span> -->
+                    </div>
+                </div>
+                <!-- 文章内容 -->
+                <div class="content">
+
+
+                    <div v-html="obj.contents">{{ obj.contents }}</div>
+                </div>
+            </div>
+            <div class="fixed_top">
+                <p>返回顶部</p>
+                <img src="images/top.png" alt="">
+            </div>
+        </div>
+        <!-- <div class="next_article" v-if="obj.next">
+            <div class="top_title">
+                <a :href="nexthref">
+                    <p>下一篇</p>
+                    <h1 style="cursor:pointer;">{{ obj.next.title }}</h1>
+                    <div class="rl">
+                        <span>来源: xxxoo</span> -->
+        <!-- <span>
+                            <img src="http://www.lianbihome.net/img/time_.png" alt=""> {{ obj.next.time }}
+                        </span>
+                        <span><img src="http://www.lianbihome.net/img/see_.png"> {{ obj.next.num }}</span>
+                    </div>
+                    <div class="rl_small"> -->
+        <!-- <span>来源: xxxoo</span> -->
+        <!-- <span>
+                            <img src="http://www.lianbihome.net/img/time_.png" alt=""> {{ obj.next.time }}
+                        </span>
+                        <span><img src="http://www.lianbihome.net/img/see_.png"> {{ obj.next.num }}</span>
+                    </div>
+                </a>
+            </div>
+        </div> -->
+        <footer>
+            <div class="link">
+                <div>
+                    <ul class="relevant">
+                        <li><a href="./aboutus.html">关于我们</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <div class="endabout" style="flex: 1;">
+                        <h2 style="color:#fff;font-size:16px;margin-bottom: 10px;">友情链接</h2>
+                        <!-- <a href="https://bbb.one" target="_blank">BBB.ONE</a>
+                        <a href="http://www.bitcoin86.com/" target="_blank">Bitcoin86</a>
+                        <a href="http://www.bittrex.com" target="_blank">BITTREX</a>
+                        <a href="https://www.bitv.com/" target="_blank">BITV</a>
+                        <a href="http://www.btex.com" target="_blank">BTEX</a>
+                        <a href="http://www.FN.com">FN财经</a>
+                        <a href="http://www.odaily.com" target="_blank">Odaily星球日报</a>
+                        <a href="https://www.onepaces.com/" target="_blank">一步财经</a>
+                        <a href="https://www.sandianzhong.com/" target="_blank">三点钟财经</a>
+                        <a href="http://jgy.com/" target="_blank">九个亿财经</a>
+                        <a href="http://www.blockchain123.com" target="_blank">区块链导航</a>
+                        <a href="http://www.xhcjtv.com/" target="_blank">嘻哈财经</a>
+                        <a href="http://www.8btc.com" target="_blank">巴比特</a>
+                        <a href="https://www.binance.com/" target="_blank">币安</a>
+                        <a href="http://www.bixiaobai.com" target="_blank">币小白</a>
+                        <a href="http://www.xcj.com" target="_blank">新财经</a>
+                        <a href="http://www.hecaijing.com" target="_blank">核财经</a>
+                        <a href="http://www.haitunbc.com/">海豚区块链</a>
+                        <a href="https://www.ihuoqiu.com/" target="_blank">火球财经</a>
+                        <a href="https://www.pandaminer.com/">熊猫矿机</a>
+                        <a href="http://niubafa.com/" target="_blank">牛吧发</a>
+                        <a href="http://www.niu6.cn" target="_blank">牛币情报局</a>
+                        <a href="https://oxbtc.com/" target="_blank">牛比特</a>
+                        <a href="http://www.zhenniucaijing.com/" target="_blank">真牛财经</a>
+                        <a href="http://www.jiedian.io/" target="_blank">节点财经</a>
+                        <a href="https://www.yaofache.com/" target="_blank">要发车</a>
+                        <a href="http://www.qifengle.com/" target="_blank">起风财经</a>
+                        <a href="https://www.7234.cn/" target="_blank">链世界</a>
+                        <a href="https://www.feixiaohao.com/" target="_blank">非小号</a> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        $('.navbar-list').on("click", 'li', function () {
+            $(this).addClass("nav-active").siblings().removeClass('nav-active')
+        })
+        $('.list-container li').hover(function () {
+            $(this).addClass('li-active').siblings().removeClass('li-active');
+        }, function () {
+            $(this).removeClass('li-active');
+        })
+        var app = new Vue({
+            el: '#app',
+            data: {
+                obj: "",
+                nexthref: ''
+            },
+            created: function () {
+                this.getDetail();
+                getfoot();
+            },
+            mounted: function () {
+                getfoot();
+            },
+            updated: function () {
+                ready1(); getfoot();
+            },
+            methods: {
+                getDetail: function () {
+                    var that = this;
+                    var id = GetQueryString('id');
+                    $.ajax(url + '/index/carousel_de/id/' + id, {
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (res) {
+                            // console.log(res);
+                            that.obj = res;
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

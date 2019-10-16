@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+	<title>承兑商申请</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			margin:0;
+			padding:0;
+			font-family:"微软雅黑","Arial";
+		}
+		a{
+			text-decoration:none;
+		}
+		/*导航*/
+		.w_nav{
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            width:100%;
+            height:75px;
+            background:url(images/bg02.png) no-repeat;
+            background-size:cover;
+            box-shadow: 0px 3px 12px 1px rgba(9,72,118,0.2);
+        }
+        .w_nav-item > a:hover {
+            border-bottom: 6px solid #adddff;
+        }
+        .nav_big{
+            height:100%;
+            line-height:75px;
+            margin: 0px auto;
+        }
+        .logo{
+            width:140px;
+            height:auto;
+            padding-left: 20px;
+            margin: 20px;
+            overflow:hidden;
+            float:left;
+        }
+        .logo img{
+            width:100%;
+            vertical-align: middle;
+        }
+        .w_nav-item{
+            margin: 0 auto;
+            width:80%;
+            height:100%;
+        }
+        .w_nav-item a{
+            /*width:12%;*/
+            height:100%;
+            color:#fff;
+            text-align:center;
+            float:left;
+            font-size:16px;
+            display:inline-block;
+			padding: 0 10px;
+        }
+        .w_nav-item span{
+            width:5%;
+            height:100%;
+            color:#fff;
+            text-align:center;
+            float:left;
+            line-height:75px;
+            font-size:16px;
+            display:inline-block;
+            border-bottom:none;
+            cursor: pointer;
+        }
+        .w_nav-item span img{
+            width:30px;
+            vertical-align: middle;
+        }
+        .nav_shame{
+            width:100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding:0px 15px;
+            display:none;
+        }
+        .w_nav_btn{
+            float:right;
+            width:45px;
+            height:50px;
+        }
+        .w_nav_btn img{
+            vertical-align: middle;
+        }
+        .main_big{
+			box-sizing:border-box;
+			padding:10px;
+		}
+		.main_big p{
+			line-height:25px;
+		}
+        @media screen and (min-width:1200px){
+            .nav_big{
+                width:1200px;
+            }
+        }
+        @media screen and (max-width:1200px){
+            .nav_big{
+                width:1000px;
+            }
+        }
+        @media screen and (max-width:992px){
+            .nav_big{
+                width:900px;
+                display:block;
+            }
+        }
+        @media screen and (max-width:1200px){
+            .w_nav{
+                height:50px;
+                line-height:50px;
+            }
+            .nav_big{
+                display:none;
+            }
+            .nav_shame{
+                display:block;
+            }
+            .main_big{
+                width:100%;
+            }
+            #home {
+                margin-top: 50px;
+            }
+        }
+
+		.box{
+			width:100%;
+			height:auto;
+			background:#1077c4;
+			overflow:hidden;
+			position:absolute;
+			top:50px;
+			left:0;
+			z-index:999;
+			border-top:1px solid #fff;
+			display:none;
+			background:url(images/bg00.png);
+			background-size:cover;
+		}
+		.box a,span{
+			width:100%;
+			height:40px;
+			display:block;
+			font-size:15px;
+			color:#fff;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding:0px 15px;
+			line-height:40px;
+			border-bottom:1px solid #ccc;
+		}
+		.box span:last-child{
+			border-bottom:none;
+		}
+		.box span img{
+			width:30px;
+			vertical-align: middle;
+		}
+		@media screen and (min-width:1200px){
+			.nav_big{
+				width:1200px;
+			}
+			 .content p i:nth-child(1){
+	        	width:8%;
+	        }
+		}
+		@media screen and (max-width:1200px){
+			.nav_big{
+				width:1000px;
+			}
+			.nav-item a {
+				font-size: 12px;
+				padding: 0 5px;
+			}
+			 .content p i:nth-child(1){
+	        	width:8%;
+	        }
+		}
+		@media screen and (max-width:992px){
+			.nav_big{
+				width:900px;
+				display:block;
+			}
+			.nav-item a {
+				font-size: 12px;
+				padding: 0 5px;
+			}
+			 .content p i:nth-child(1){
+	        	width:8%;
+	        }
+		}
+		@media screen and (max-width:820px){
+			.nav{
+				height:50px;
+				line-height:50px;
+			}
+			.nav_big{
+				display:none;
+			}
+			.nav_shame{
+				display:block;
+			}
+			.main_big{
+				width:100%;
+			}
+			 .content p i:nth-child(1){
+	        	width:8%;
+	        }
+		}
+		.main{
+			width:100%;
+			height:auto;
+			overflow:hidden;
+			margin-top:80px;
+		}
+		.main_big{
+			width:860px;
+			height:auto;
+			overflow:hidden;
+			margin:15px auto;
+		}
+		.main_big p{
+			font-size:15px;
+			color:#7E7E7E;
+			margin-bottom:10px;
+		}
+		.main_left{
+			width:30%;
+			height:auto;
+			font-size:14px;
+			float:left;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border-bottom:1px solid #E1E1E1;
+		}
+		.main_right{
+			width:65%;
+			height:auto;
+			overflow:hidden;
+			float:left;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding:0px 15px;
+			margin-left:5%;
+
+		}
+		.item_box{
+			width:100%;
+			height:auto;
+			overflow:hidden;
+		}
+		.left_item{
+			width:100%;
+			height:50px;
+			line-height:50px;
+			overflow:hidden;
+			text-align:left;
+			color:#fff;
+			background:#399FF4;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left:8px;
+			border-bottom:1px solid #E1E1E1;
+			cursor:pointer;
+
+		}
+		.left_down{
+			width:100%;
+			height:auto;
+			font-size:12px;
+			overflow:hidden;
+			color:#484848;
+			display:none;
+			cursor:pointer;
+			background:#fff;
+		}
+		.down{
+			width:100%;
+			height:50px;
+			line-height:50px;
+			overflow:hidden;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border-bottom:1px solid #E1E1E1;
+			border-right:1px solid #E1E1E1;
+			border-left:1px solid #E1E1E1;
+			cursor:pointer;
+			padding-left:8px;
+		}
+		.left_item img{
+			float:right;
+			width:4%;
+			margin-top:21px;
+			margin-right:11px;
+			vertical-align: middle;
+		}
+		.main_right .main_title{
+			width:100%;
+			height:35px;
+			/*line-height:35px;*/
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			color:#399FF4;
+			font-size:14px;
+			padding-left:8px;
+			border-bottom:1px solid #E1E1E1;
+		}
+		.content p{
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding:0px 10px;
+			font-size:12px;
+			line-height:25px;
+			color:#808080;
+			display:inline-block;
+			width:100%;
+		}
+		.main_title .meun{
+			width: 65px;
+		    height: 30px;
+		    line-height: 30px;
+		    float: right;
+		    color: #fff;
+		    font-size: 14px;
+		    line-height: 30px;
+		    background: #86C9FC;
+		    text-align: center;
+		    border-radius: 5px;
+		    border: none;
+		    padding: 0px;
+			display:none;
+		}
+		.main_big .big_title {
+			font-weight:bold;
+			margin-bottom:19px;
+		}
+		@media screen and (max-width:819px){
+			.nav{
+				height:50px;
+				line-height:50px;
+			}
+			.nav_big{
+				display:none;
+
+			}
+			.nav_shame{
+				display:block;
+			}
+			.main_big{
+				width:100%;
+				margin-top:30px;
+			}
+			 .content p i:nth-child(1){
+	        	width:7%;
+	        }
+		}
+		@media screen and (max-width:640px){
+
+			.main_big .big_title {
+			    text-align:center;
+			    color:#399FF4;
+			}
+			.main_right .main_title{
+				color:#666;
+				line-height: 30px;
+			}
+			.main_left{
+				display:none;
+			}
+			.main_right {
+				width:100%;
+				margin-left:0;
+			}
+			.main_title .meun{
+				display:block;
+			}
+			.content{
+				margin-top:20px;
+			}
+			.content p i:nth-child(1){
+	        	width:12%;
+	        }
+		}
+		.model_btn{
+			width:100%;
+			height:100%;
+			position:fixed;
+			/*background:rgba(0,0,0,0.5);*/
+			z-index:999;
+			top:0;left:0;
+			display:none;
+		}
+		.model_inner{
+			width:100%;
+			height:100%;
+			/*position:fixed;*/
+			background:rgba(0,0,0,0.5);
+
+
+		}
+		.model_box{
+			width:85%;
+			height:auto;
+			overflow:hidden;
+			position:absolute;
+			top:23%;
+			left:10%;
+			margin:auto;
+		}
+		.left_item:last-child{
+			border:none;
+		}
+
+
+    /***** footer样式开始 *****/
+        #contact {
+            background: url(images/banner.png);
+            background-size: cover;
+            width:100%;
+            position:relative;
+            height: 415px;
+            bottom:0;
+        }
+        #contact .lvjing {
+            position: absolute;
+            top: 0;
+            /*left:30%;*/
+            width:100%;
+            height: 350px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-top:50px;
+        }
+        #contact .title{
+            text-align: center;
+        }
+        #contact .title span {
+        	width:auto;
+            border: none;
+            font-size: 29px;
+            letter-spacing: 3px;
+            display:inline-block;
+        }
+        #contact .footer {
+            position: absolute;
+            bottom: 0;
+            height: 65px;
+            width: 100%;
+        }
+        #contact .footer .wrap .icon_wrap > img {
+            width: 40px;
+        }
+        #contact .myBtn {
+			width: 260px;
+			height: 50px;
+			cursor: pointer;
+			line-height:50px;
+			font-size: 20px;
+			background: transparent;
+			color: #FFFFFF;
+			outline: none;
+			border: 1px solid #ffffff;
+			border-radius: 30px;
+			text-align:center;
+		}
+		#contact .myBtn > span {
+			border: none;
+			width: auto;
+			 height: auto;
+			 display: inline-block;
+		}
+        #contact .myBtn:hover{
+        	color:#93f3fe;
+        }
+        #contact .myBtn:hover  .img1{
+			display:none;
+        }
+        #contact .myBtn:hover  .img2{
+			display:inline-block;
+        }
+        .img2{
+        	display:none;
+        }
+        .img1{
+        	display:inline-block;
+        }
+        .myBtn img{
+        	vertical-align: middle;
+        	width:14%;
+        	margin-right:5px;
+        	margin-top:-4px;
+        }
+        @media screen and (max-width: 765px) {
+            #contact .title span {
+                font-size: 20px;
+                display:block;
+            }
+            #contact .myBtn {
+                width: 220px;
+                height: 45px;
+                line-height:45px;
+                font-size: 20px;
+                background: transparent;
+                color: #FFFFFF;
+                outline: none;
+                border: 1px solid #ffffff;
+                border-radius: 30px;
+            }
+            #contact .footer .wrap{
+                padding: 0 10px ;
+            }
+            #contact .footer .wrap .icon_wrap > img {
+                width: 30px;
+            }
+            #contact .lvjing{
+            	width:100%;
+            	left:0%;
+            }
+            .content p i:nth-child(1){
+	        	width:12%;
+	        }
+        }
+        #contact .footer {
+            /*height: 80px;*/
+            background-color: transparent;
+            box-shadow: 0 -3px 15px rgba(0,0,0,.15);
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .out{
+        	width:100%;
+        	height:auto;
+        	overflow:hidden;
+        	margin-bottom:90px;
+        }
+        #particles-home2 {
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+            position: absolute;
+        }
+         @media screen and (max-width: 320px) {
+            #contact .lvjing {
+            	width:100%;
+                left: 0%;
+            }
+            .content p i:nth-child(1){
+	        	width:12%;
+	        }
+        }
+        i{
+        	font-style:normal;
+        }
+        .content p i:nth-child(1){
+
+        	float:left;
+        	display:inline-block;
+        }
+        .content p i:last-child{
+        	width:87%;
+        	/*margin-left:1%;*/
+        	float:left;
+        	display:inline-block;
+        }
+        .down:hover{
+        	color:#399FF4;
+        }
+        .blue{
+        	color:#399FF4;
+        }
+        /*.nav-item a*/
+		a:focus, a:hover{
+			text-decoration: none;
+		}
+		.table td{
+			padding: 15px 10px !important;
+			min-width: 94px;
+			text-align: center;
+			color: grey;
+		}
+		.table thead tr{
+			font-weight: bold;
+			background: rgba(57,159,244,0.2);
+		}
+		.table thead td{
+			color: #5A98D7;
+		}
+		.l-h-38{
+			line-height: 38px !important;
+		}
+
+		/*联系我们*/
+        .about_main{
+			width:700px;
+			margin:0 auto !important;
+			height:auto;
+			overflow:hidden
+        }
+        .new_aboutUs{
+        	width:320px;
+        	height:auto;
+        	overflow:hidden;
+        	margin:0 auto;
+        	margin-top:7%;
+        	margin-left:20px;
+        	float:left;
+        }
+        .new_aboutUs p{
+        	font-size:16px !important;
+        	color:#fff;
+        	line-height:20px !important;
+        }
+        .download{
+			float:left;
+        }
+		 @media screen and (max-width: 765px) {
+		 	.main{
+		 		margin-top:40px;
+		 	}
+		 	.download{
+				float:none;
+        	}
+		 	#contact{
+		 		height:550px;
+		 	}
+           .about_main{
+        		width:320px;
+
+        	}
+        	.new_aboutUs{
+	        	margin-left:10px;
+       		 }
+        }
+	</style>
+</head>
+<body>
+	<div class="out">
+	<!--导航-->
+    <div class="w_nav">
+        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <div class="nav_big">
+            <div class="w_nav-item">
+                <a href="./index.html?#home" data-localize="hpt.NAV-1">首页</a>
+                <a href="./index.html?#bootstrap3"  data-localize="hpt.NAV-2">无界简介</a>
+                <a href="./index.html?#bootstrap4"  data-localize="hpt.NAV-3">无界优势 </a>
+                <a href="./index.html?#feature"  data-localize="hpt.NAV-4">生态系统</a>
+                <a href="./newtem.html"  data-localize="hpt.NAV-5">新手指导</a>
+                <a href="./rateStandards.html" data-localize="hpt.NAV-6">费率标准</a>
+                <a href="./coinManage.html" data-localize="hpt.NAV-7">上币申请</a>
+                <a href="./mapping.html"  data-localize="hpt.NAV-8">承兑商申请</a>
+                <span data-value="cn" onclick="chgLang(this)"><img src="images/china.png" alt=""></span>
+                <span data-value="ja" onclick="chgLang(this)"><img src="images/jn.png" alt=""></span>
+                <span data-value="en" onclick="chgLang(this)"><img src="images/英国国旗@3x.png" alt=""/></span>
+            </div>
+        </div>
+        <div class="nav_shame">
+            <div class="logo" style="width:120px"><img src="images/logo.png" alt=""></div>
+            <div class="w_nav_btn"><img src="images/btn.png" alt=""></div>
+            <div class="box">
+                <a href="./index.html?#home" data-localize="hpt.NAV-1">首页</a>
+                <a href="./index.html?#bootstrap3"  data-localize="hpt.NAV-2">无界简介</a>
+                <a href="./index.html?#bootstrap4"  data-localize="hpt.NAV-3">无界优势 </a>
+                <a href="./index.html?#feature"  data-localize="hpt.NAV-4">生态系统</a>
+                <a href="./newtem.html"  data-localize="hpt.NAV-5">新手指导</a>
+                <a href="./rateStandards.html" data-localize="hpt.NAV-6">费率标准</a>
+                <a href="./coinManage.html" data-localize="hpt.NAV-7">上币申请</a>
+                <a href="./mapping.html"  data-localize="hpt.NAV-8">承兑商申请</a>
+                <span data-value="cn" onclick="chgLang(this)"><img src="images/china.png" alt=""></span>
+                <span data-value="ja" onclick="chgLang(this)"><img src="images/jn.png" alt=""></span>
+                <span data-value="en" onclick="chgLang(this)"><img src="images/英国国旗@3x.png" alt=""/></span>
+            </div>
+        </div>
+    </div>
+<!-- 主题 -->
+	<div class="main">
+		<div class="main_big">
+			<h3 data-localize="hpt.NAV-21">承兑商说明及申请</h3>
+			<p data-localize="hpt.NAV-22">无界的承兑商系统真正实现人人承兑，任何人都可按照要求申请成为承兑商，为平台用户充值提现赚取稳定手续费，并且平台用户承兑更加快速便捷。</p>
+			<h4 data-localize="hpt.NAV-23">Borderless无界承兑商申请流程：</h4>
+			<h5 data-localize="hpt.NAV-24">步骤一：按要求准备下述材料</h5>
+			<p data-localize="hpt.NAV-25">1.申请者需在无界内持有50万个BDS以上；</p>
+			<p data-localize="hpt.NAV-26">2.申请者需要提供至少10万人民币或以上的额度进行承兑；</p>
+			<p data-localize="hpt.NAV-27">3.请下载无界承兑商申请表（下载地址如下），按要求填写申请资料；</p>
+			<h5 data-localize="hpt.NAV-28">步骤二：发送申请邮件</h5>
+			<p data-localize="hpt.NAV-29">请将以上申请资料发送邮件至 otc@borderless.vip ，邮件主题为“申请成为承兑商”。</p>
+			<h5 data-localize="hpt.NAV-30">步骤三：资料审核</h5>
+			<p data-localize="hpt.NAV-31">我们将在24小时内对您的承兑商申请资料进行审核，请保持通讯畅通，我们会主动与您取得联系。</p>
+			<h5 data-localize="hpt.NAV-32">步骤四：缴纳保证金</h5>
+			<p data-localize="hpt.NAV-33">审核通过后，用1:1人民币的资金找指定承兑商充值，然后上传资料您即可成为无界承兑商。</p>
+			<p data-localize="hpt.NAV-34">举例说明：我想成为无界承兑商，并且想拥有20万人民币的承兑额度在无界平台为用户提供充值与提现服务，并赚取相应的充值提现手续费，我的无界账户bds888持有50万的BDS，我提交资料成功后，找指定承兑商充值20万元换取1:1等值的BC（即BDSCNY），上传资料即可成为无界承兑商。</p>
+			<p data-localize="hpt.NAV-35">满足以上条件的申请人，可填写承兑商申请表（下载地址如下），并发送至下方邮箱。</p>
+			<p data-localize="hpt.NAV-36" style="display: inline-block">申请表下载地址：</p><a  style="display: inline-block" data-localize="hpt.NAV-38" href="无界承兑商申请资料模板v5.0.docx" >点击下载申请表</a>
+			<p data-localize="hpt.NAV-37">联系邮箱：otc@borderless.vip</p>
+			<!-- <p class="big_title" id="big_title" data-localize="hpt.TITILE-NAME4">首页／上币申请</p> -->				
+		</div>
+	</div>
+	</div>
+    <!--footer-->
+    <section id="contact">
+        <!--canvas-->
+        <div id="particles-home2"></div>
+        <div class="lvjing">
+            <div class="title">
+                <span data-localize="hpt.FOOTER-1">[ 无界 Borderless ]</span>
+                <span data-localize="hpt.FOOTER-2">无界无疆 乃包容与开放</span>
+            </div>
+            <div class="about_main">
+	            <div class="download" style="display: flex;flex-direction: column;align-items: center;margin-top: 50px">
+					<a href="https://www.pgyer.com/ujcD" class="myBtn btn2" style="margin-bottom: 20px" target="_blank">
+						<!--<a class="btn myBtn btn2 xiazai">-->
+                    <img src="images/ios01.png" alt="" class="img1"><img src="images/ios02.png" alt="" class="img2">
+					<span data-localize="hpt.FOOTER-DOWNLOAD1">iOS 下载</span>
+                </a>
+				<a href="https://www.pgyer.com/ujcD" class="myBtn btn2" target="_blank">
+                <!--<a class="btn myBtn btn2 xiazai">-->
+                    <img src="images/android.png" alt="" class="img1"><img src="images/android01.png" alt="" class="img2">
+					<span data-localize="hpt.FOOTER-DOWNLOAD2">Android 下载</span>
+                </a>
+            </div>
+	            <div class="new_aboutUs">
+	                <p>联系我们：</p>
+	                <p>承兑商申请邮件：otc@borderless.vip</p>
+	                <p>上币服务邮件：support@borderless.vip </p>
+					<p>商务合作邮箱：bd@borderless.vip</p>
+						
+				</div>
+			</div>
+        </div>
+        <div class="footer">
+            <div class="wrap" style="width: 1000px;display: flex;justify-content: space-between;align-items: center">
+                <span style="font-size: 16px;border:none;width:auto">©2018 Borderless</span>
+                <div class="icon_wrap">
+                    <img src="./images/facebook.png" alt="">
+                    <img src="./images/larry.png" alt="">
+                    <img src="./images/wifi.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact-->
+</body>
+</html>
+<script src="./js/jquery.js"></script>
+<script src="js/particles.min.js"></script>
+
+<script src="./js/jquery.localize.js"></script>
+<script src="./js/language_cookie.js"></script>
+<script src="js/data.js"></script>
+<script>
+	// window.onbeforeunload = function(){ return '将丢失未保存的数据!'; } 
+	var datas=new Array;
+	// localStorage.setItem('name','ja')
+	var xz="ios";
+	$(".w_nav_btn").click(function(){
+		$(".box").slideToggle();
+	});
+	$(".left_item").eq(0).next(".left_down").show();
+	$(".left_item").eq(0).children("img").css({transform:"rotate(90deg)"});	
+	$(".left_item").click(function(){
+		$(".left_item").children("img").css({transform:"rotate(0deg)"});
+		$(this).children("img").css({transform:"rotate(90deg)"});
+		$(".left_down").hide();	
+		$(this).next(".left_down").show();
+
+	});
+
+	download(this,"ios",'2');
+	function download(obj,m,nem){
+		var cont="";
+		if(getCookie(name)=="ja"){
+			for(var i=0;i<En_data[m].length;i++){
+				if(En_data[m][i]==""){
+					cont+='<p><i></i><i>'+En_data[m][i]+'</i></p>';
+				}else{
+					cont+='<p><i>（'+(i+1)+'）</i><i>'+En_data[m][i]+'</i></p>';
+				}
+			
+			}
+			$("#content").html(cont);
+			$(".model_btn").css("display","none");
+
+		}else if(getCookie(name)=="cn"){
+			for(var i=0;i<data[m].length;i++){
+				if(data[m][i]==""){
+					cont+='<p><i></i><i>'+data[m][i]+'</i></p>';
+				}else{
+					cont+='<p><i>（'+(i+1)+'）</i><i>'+data[m][i]+'</i></p>';
+				}
+			
+			}
+			$("#content").html(cont);
+			$(".model_btn").css("display","none");
+		}else if(getCookie(name)==null){
+			for(var i=0;i<En_data[m].length;i++){
+				if(En_data[m][i]==""){
+					cont+='<p><i></i><i>'+En_data[m][i]+'</i></p>';
+				}else{
+					cont+='<p><i>（'+(i+1)+'）</i><i>'+En_data[m][i]+'</i></p>';
+				}
+			
+			}
+			$("#content").html(cont);
+			$(".model_btn").css("display","none");
+		}
+		// console.log(nem)
+		$(".down").removeClass('blue').eq(0).addClass('blue');
+		if(nem=='1'){
+			$(".down").removeClass('blue');
+			$(obj).addClass('blue');
+		}
+		
+	}
+
+	function meun(){
+		$(".model_btn").css("display","block");
+	}
+
+	function model_btn(){
+		$(".model_btn").css("display","none");
+	}
+
+	function w_lang(obj,yx){
+		if(yx=="ja"){
+			datas[0]="ja";	
+		}else if(yx=="cn"){
+			datas[0]="cn";	
+		}
+		download(this,xz,'2');
+		chgLang(obj);
+	}
+
+
+	// 动画
+	 particlesJS('particles-home2',
+
+           {
+               "particles": {
+                   "number": {
+                       "value": 80,
+                       "density": {
+                           "enable": true,
+                           "value_area": 800
+                       }
+                   },
+                   "color": {
+                       "value": "#00ffc6" //点颜色
+                   },
+                   "shape": {
+                       "type": "circle",
+                       "stroke": {
+                           "width": 0,
+                           "color": "#000000"
+                       },
+                       "polygon": {
+                           "nb_sides": 5
+                       },
+                       "image": {
+                           "src": "img/github.svg",
+                           "width": 100,
+                           "height": 100
+                       }
+                   },
+                   "opacity": {
+                       "value": 0.4,
+                       "random": false,
+                       "anim": {
+                           "enable": false,
+                           "speed": 1,
+                           "opacity_min": 0.1,
+                           "sync": false
+                       }
+                   },
+                   "size": {
+                       "value": 3.9458004845442964,
+                       "random": true,
+                       "anim": {
+                           "enable": false,
+                           "speed": 40,
+                           "size_min": 0.1,
+                           "sync": false
+                       }
+                   },
+                   "line_linked": {
+                       "enable": true,
+                       "distance": 150,
+                       "color": "#ffffff", //线颜色
+                       "opacity": 0.2,
+                       "width": 1
+                   },
+                   "move": {
+                       "enable": true,
+                       "speed": 6,
+                       "direction": "none",
+                       "random": false,
+                       "straight": false,
+                       "out_mode": "out",
+                       "bounce": false,
+                       "attract": {
+                           "enable": false,
+                           "rotateX": 600,
+                           "rotateY": 1200
+                       }
+                   }
+               },
+               "interactivity": {
+                   "detect_on": "canvas",
+                   "events": {
+                       "onhover": {
+                           "enable": true,
+                           "mode": "repulse"
+                       },
+                       "onclick": {
+                           "enable": true,
+                           "mode": "push"
+                       },
+                       "resize": true
+                   },
+                   "modes": {
+                       "grab": {
+                           "distance": 400,
+                           "line_linked": {
+                               "opacity": 1
+                           }
+                       },
+                       "bubble": {
+                           "distance": 400,
+                           "size": 40,
+                           "duration": 2,
+                           "opacity": 8,
+                           "speed": 3
+                       },
+                       "repulse": {
+                           "distance": 200,
+                           "duration": 0.4
+                       },
+                       "push": {
+                           "particles_nb": 4
+                       },
+                       "remove": {
+                           "particles_nb": 2
+                       }
+                   }
+               },
+               "retina_detect": true
+           }
+
+       );
+
+</script>

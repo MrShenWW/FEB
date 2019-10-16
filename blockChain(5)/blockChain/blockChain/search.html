@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>链客财经</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div id="index" class="navbar-top">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#" title="区块链">
+                        <img src="images/logo.png" alt="区块链">
+                    </a>
+                </div>
+                <ul class="navlist">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="newlist.html">快讯</a></li>
+                    <li class="active"><a href="information.html">资讯</a></li>
+                    <!-- <li><a href="activity.html">活动</a></li> -->
+                    <li><a href="websitenav.html">业务范围</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text">
+                    <span class="search-btn">
+                        <img src="images/search_1.png" alt=""> 搜索
+                    </span>
+                </div>
+            </div>
+            <div class="smallBar">
+                <div class="menu">
+                    <img src="images/menu.png" alt="">
+                    <div class="menuContent">
+                        <div class="menuList">
+                            <div class="logo" style="padding:0;">
+                                <a href="#" title="区块链">
+                                    <img src="images/logo.png" alt="区块链">
+                                </a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="index.html">首页</a>
+                                </li>
+                                <li>
+                                    <a href="newlist.html">快讯</a>
+                                </li>
+                                <li>
+                                    <a href="information.html">资讯</a>
+                                </li>
+                                <li>
+                                    <a href="activity.html">活动</a>
+                                </li>
+                                <li>
+                                    <a href="websitenav.html">业务范围</a>
+                                </li>
+                                <li>
+                                    <a href="search.html">搜索</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mark"></div>
+                </div>
+                <div class="logo">
+                    <a href="#" title="区块链">
+                        <img src="images/logo.png" alt="区块链">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="search_container">
+                <input type="text" v-model="keyword">
+                <span @click="getDetail">搜索</span>
+            </div>
+            <div class="search-nav search_nav">
+                <ul>
+                    <li class="search_active">
+                        资讯
+                        <span></span>
+                    </li>
+                    <li>
+                        快讯
+                        <span></span>
+                    </li>
+                </ul>
+                <p>为你找到 <span>{{ num }}</span> 条 关于<span> {{ keyword }} </span>的结果</p>
+            </div>
+
+            <!-- 文章列表 -->
+            <div class="article-list">
+                <ul class="list-container" v-if="type == 1">
+                    <li v-for="item of zixunshow" v-bind:key='item.id'>
+                        <a :href="item.href" target="blank">
+                            <div class="article-pic">
+                                <img :src="item.img" alt="item.title">
+                            </div>
+                            <div class="text">
+                                <h3 v-html="item.title">{{ item.title }}</h3>
+                                <div class="con" v-html="item.contents">
+                                    {{ item.contents }}
+                                </div>
+                                <div class="rl">
+                                    <!-- <span>xxxoo</span> -->
+                                    <span>
+                                        <img src="http://www.lianbihome.net/img/time_.png" alt=""> {{ item.time }}
+                                    </span>
+                                    <span><img src="../blockChain/images/see_1.png"> {{ item.num }}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <p style="text-align:center;" v-if="type ==1 && zixun.length <= 0">暂无搜索内容</p>
+                </ul>
+                <div class="news_box" v-else>
+                    <ul>
+                        <li v-for='item in kuaixunshow' v-bind:key='item.id'>
+                            <p class="news_title">
+                                <span class="cirle"></span>
+                                <span class="arrow"></span>
+                                <span class="time">{{ item.time }}</span>
+                                <span class="line"></span>
+                            </p>
+                            <div class="dsc">
+                                <h3 v-html="item.title">{{ item.title }}</h3>
+                                <p v-html="item.contents">
+                                    {{ item.contents }}
+                                </p>
+                            </div>
+                            <div class="bottom"></div>
+                            <span class="down">
+                                <img src="images/down.png" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                    <p style="text-align:center;" v-if="type ==2 && kuaixun.length <= 0">暂无搜索内容</p>
+                </div>
+                <p class="more" @click="getlist(1)" v-if="(type ==1 && zixun.length > 0) || (type ==2 && kuaixun.length > 0)">
+                    浏览更多
+                </p>
+
+            </div>
+
+
+            <div class="fixed_top">
+                <p>返回顶部</p>
+                <img src="images/top.png" alt="">
+            </div>
+        </div>
+        <footer>
+            <div class="link">
+                <div>
+                    <ul class="relevant">
+                        <li><a href="./aboutus.html">关于我们</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <div class="endabout" style="flex: 1;">
+                        <h2 style="color:#fff;font-size:16px;margin-bottom: 10px;">友情链接</h2>
+                        <!-- <a href="https://bbb.one" target="_blank">BBB.ONE</a>
+                        <a href="http://www.bitcoin86.com/" target="_blank">Bitcoin86</a>
+                        <a href="http://www.bittrex.com" target="_blank">BITTREX</a>
+                        <a href="https://www.bitv.com/" target="_blank">BITV</a>
+                        <a href="http://www.btex.com" target="_blank">BTEX</a>
+                        <a href="http://www.FN.com">FN财经</a>
+                        <a href="http://www.odaily.com" target="_blank">Odaily星球日报</a>
+                        <a href="https://www.onepaces.com/" target="_blank">一步财经</a>
+                        <a href="https://www.sandianzhong.com/" target="_blank">三点钟财经</a>
+                        <a href="http://jgy.com/" target="_blank">九个亿财经</a>
+                        <a href="http://www.blockchain123.com" target="_blank">区块链导航</a>
+                        <a href="http://www.xhcjtv.com/" target="_blank">嘻哈财经</a>
+                        <a href="http://www.8btc.com" target="_blank">巴比特</a>
+                        <a href="https://www.binance.com/" target="_blank">币安</a>
+                        <a href="http://www.bixiaobai.com" target="_blank">币小白</a>
+                        <a href="http://www.xcj.com" target="_blank">新财经</a>
+                        <a href="http://www.hecaijing.com" target="_blank">核财经</a>
+                        <a href="http://www.haitunbc.com/">海豚区块链</a>
+                        <a href="https://www.ihuoqiu.com/" target="_blank">火球财经</a>
+                        <a href="https://www.pandaminer.com/">熊猫矿机</a>
+                        <a href="http://niubafa.com/" target="_blank">牛吧发</a>
+                        <a href="http://www.niu6.cn" target="_blank">牛币情报局</a>
+                        <a href="https://oxbtc.com/" target="_blank">牛比特</a>
+                        <a href="http://www.zhenniucaijing.com/" target="_blank">真牛财经</a>
+                        <a href="http://www.jiedian.io/" target="_blank">节点财经</a>
+                        <a href="https://www.yaofache.com/" target="_blank">要发车</a>
+                        <a href="http://www.qifengle.com/" target="_blank">起风财经</a>
+                        <a href="https://www.7234.cn/" target="_blank">链世界</a>
+                        <a href="https://www.feixiaohao.com/" target="_blank">非小号</a> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        function ready() {
+            $('.navbar-list').on("click", 'li', function () {
+                $(this).addClass("nav-active").siblings().removeClass('nav-active')
+            })
+            $('.list-container li').hover(function () {
+                $(this).addClass('li-active').siblings().removeClass('li-active');
+            }, function () {
+                $(this).removeClass('li-active');
+            })
+            // 搜索列表选项卡切换
+            $('.search_nav').on('click', 'li', function () {
+                var index = $(this).index() + 1;
+                app.num = index == 1 ? app.zixun.length : app.kuaixun.length;
+                app.type = index;
+                $(this).addClass('search_active').siblings().removeClass('search_active');
+
+                // app.loadlist(1);
+                if (app.keyword == "" || app.number == 1) {
+                    return;
+                }
+                // app.number = 1;
+                // app.getDetail();
+            })
+            // 展开详情
+            $(document).on("click", ".down", function () {
+                console.log($(this));
+                if ($(this).hasClass('up')) {
+                    $(this).removeClass("up");
+                    $(this).siblings('.dsc').find('p').removeClass('active');
+                } else {
+                    $(this).addClass("up");
+                    $(this).siblings('.dsc').find('p').addClass('active');
+                }
+
+            })
+            $(document).keydown(function (e) {
+                if (e.keyCode == 13) {
+                    app.getDetail();
+                }
+            })
+        }
+
+        //sel_zixun
+        var app = new Vue({
+            el: '#app',
+            data: {
+                zixun: [],
+                zixunshow: [],
+                zixunpage: 1,
+                kuaixun: [],
+                kuaixunshow: [],
+                kuaixunpage: 1,
+                keyword: "",
+                type: 1,
+                number: 0,
+                num: 0//条数
+            },
+            created: function () {
+                if (GetQueryString('keyword')) {
+                    this.keyword = GetQueryString('keyword');
+                    this.getDetail();
+                }
+                getfoot();
+            },
+            mounted: function () {
+                ready();
+            },
+            updated: function () {
+                ready1();
+            },
+            methods: {
+                getDetail: function () {
+                    var that = this;
+                    if (that.type == 1) {
+
+
+                    } else {
+
+
+                    }
+                    that.zixunshow = [];
+                    that.kuaixunshow = [];
+                    that.kuaixunpage = 1;
+                    that.zixunpage = 1;
+                    var data1 = {
+                        keyword: that.keyword,
+                        type: 1
+                    }
+                    var data2 = {
+                        keyword: that.keyword,
+                        type: 2
+                    }
+                    $.ajax(url + '/index/select', {
+                        type: 'POST',
+                        dataType: 'json',
+                        data: data1,
+                        success: function (res) {
+                            console.log(res);
+                            var datalist = res.data;
+                            for (let i = 0; i < datalist.length; i++) {
+                                datalist[i].title = datalist[i].title.replace(res.keyword, `<span style="color:#ed952a">${that.keyword}</span>`);
+                                datalist[i].contents = datalist[i].contents.replace(res.keyword, `<span style="color:#ed952a">${that.keyword}</span>`)
+                                datalist[i].href = "articleDetail.html?id=" + datalist[i].id;
+                            }
+                            that.zixun = datalist;
+                            if (that.type == 1) {
+                                that.num = datalist.length;
+                            }
+                            that.loadlista();
+                        }
+                    })
+                    $.ajax(url + '/index/select', {
+                        type: 'POST',
+                        dataType: 'json',
+                        data: data2,
+                        success: function (res) {
+                            console.log(res);
+                            var datalist = res.data;
+                            for (let i = 0; i < datalist.length; i++) {
+                                datalist[i].title = datalist[i].title.replace(res.keyword, `<span style="color:#ed952a">${that.keyword}</span>`);
+                                datalist[i].contents = datalist[i].contents.replace(res.keyword, `<span style="color:#ed952a">${that.keyword}</span>`)
+                            }
+                            that.kuaixun = datalist;
+                            if (that.type == 2) {
+                                that.num = datalist.length;
+                            }
+                            that.loadlistb();
+                        }
+                    })
+                },
+                getlist: function (a) {
+                    if (this.type == 1) {
+                        this.loadlista(a);
+                    } else {
+                        this.loadlistb(a);
+                    }
+                },
+                loadlista: function (isalert) {
+                    // if (this.type == 1) {
+                    if (this.zixun.length == this.zixunshow.length && isalert == 1) {
+                        alert('没有更多了');
+                        return;
+                    }
+                    for (let i = 20 * this.zixunpage - 20; i < 20 * this.zixunpage; i++) {
+                        if (this.zixun[i]) {
+                            this.zixunshow.push(this.zixun[i]);
+                        }
+
+                    }
+                    if (!this.zixun.length == this.zixunshow.length) {
+                        this.zixunpage++;
+                    }
+
+                    // } else {
+
+
+                    // }
+                },
+                loadlistb: function (isalert) {
+                    if (this.kuaixun.length == this.kuaixunshow.length && isalert == 1) {
+                        alert('没有更多了');
+                        return;
+                    }
+                    for (let i = 20 * this.kuaixunpage - 20; i < 20 * this.kuaixunpage; i++) {
+                        if (this.kuaixun[i]) {
+                            this.kuaixunshow.push(this.kuaixun[i]);
+                        }
+
+                    }
+                    if (!this.kuaixun.length == this.kuaixunshow.length) {
+                        this.kuaixunpage++;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

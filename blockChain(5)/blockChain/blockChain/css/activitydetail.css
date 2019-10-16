@@ -1,0 +1,25 @@
+.content{
+    background: #fff;
+}
+.artical{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+.artical h3{
+    line-height: 50px;
+}
+.artical > p{
+    color: #999;
+}
+.artical div{
+    margin-top: 40px;
+}
+.artical div p{
+    line-height: 30px; 
+    margin-top: 10px;
+}
+.artical div p img{
+    max-width: 100%;
+}

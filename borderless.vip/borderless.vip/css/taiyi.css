@@ -1,0 +1,228 @@
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: 430px;
+}
+
+
+ #home  .lvjing{
+     padding: 240px 0
+ }
+
+
+#home h1.title {
+    font-size: 30px;
+}
+#home h1.title>img{
+    width:34%;
+}
+#home h1.title1 {
+    font-size: 44px;
+}
+#home .img-responsive {
+    display: inline-block;
+    margin: 35px 0;
+    width: 130px;
+}
+.myBtn {
+    width: 320px;
+    height: 50px;
+    font-size: 25px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+#duihuanshang {
+    background: #F8F8F8;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#duihuanshang .title {
+    margin-bottom: 30px;
+}
+
+#duihuanshang .jieshao {
+    padding: 30px
+}
+
+#duihuanshang .jieshao .col-md-12 {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 6px 6px 14px #888888;
+}
+
+#duihuanshang .jieshao .jianjie {
+    padding: 0 15px;
+}
+
+#duihuanshang .jieshao h3 {
+    margin: 30px;
+}
+
+#duihuanshang .jieshao p {
+    line-height: 30px;
+}
+
+#duihuanshang .jieshao h4 {
+    margin-top: 30px;
+    color: black;
+}
+
+#duihuanshang .jieshao img {
+    width: 112px;
+    height: 92px;
+    margin: 40px auto 80px;
+}
+.jieshao:hover+.jianjie{
+	display:block;
+}
+.jianjie {
+    display: none;
+    position: absolute;
+    z-index: 666;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #287ADD;
+    color: #fff;
+}
+
+.zz:hover .jianjie {
+    display: block;
+}
+
+#feature {
+    padding: 80px 0 10px 0;
+    background: #fff
+}
+
+#feature .col-md-12 {
+    margin-bottom: 40px;
+}
+
+#feature .media-body {
+    padding-left: 40px;
+    /*padding-top: 15px;*/
+}
+
+#feature .media-body .media-heading {
+    font-weight: 700;
+    color: black !important;
+}
+
+#feature .media-body p {
+    margin-top: 20px;
+    letter-spacing: 3px;
+    color: #ccc
+}
+
+#contact .lvjing {
+    background: rgba(0, 0, 0, 0);
+}
+
+#contact p {
+    font-size: 20px;
+    /*font-weight: 700;*/
+}
+
+/*手机适配*/
+@media screen and (max-width: 992px) {
+    .nav>li {
+        position: relative;
+        display: block;
+        max-height:70px
+    }
+
+    #home {
+
+    }
+
+    #home  .lvjing{
+        padding:80px 0
+    }
+    #home .img-responsive {
+        display: inline-block;
+        margin: 35px 0;
+        width: 90px;
+    }
+    #home h1.title {
+        font-size:30px;
+    }
+    #home h1.title1 {
+        font-size: 30px;
+    }
+    #home  .myBtn {
+        width: 240px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 10px;
+        background: rgba(255,255,255,.3);
+        color: #FFFFFF;
+    }
+
+
+    #duihuanshang {
+        background: #fff;
+        padding: 20px 0;
+    }
+
+    #duihuanshang .col-md-6.jieshao {
+        padding: 0;
+    }
+    #duihuanshang .title{
+        margin-top: 40px;
+    }
+
+    #duihuanshang .col-md-6.jieshao .course {
+        height: 100%;
+        padding-top: 30px;
+    }
+
+    #duihuanshang .col-md-6.jieshao .course h4 {
+        margin-top: 40px;
+    }
+
+    #duihuanshang .col-md-6.jieshao .course img {
+        margin: 40px auto 60px;
+    }
+
+    #duihuanshang .jieshao .col-md-12 {
+        background: #fff;
+        border-radius: 0px;
+        box-shadow: 6px 6px 14px #8888882b;
+    }
+
+    #feature {
+        padding: 80px 0;
+        background: #fff;
+    }
+    #feature .youshitexing{
+        margin-top: 40px;
+    }
+
+    #feature .media-body {
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+    #feature .media-left{
+        padding-top: 13px;
+    }
+
+    #contact .lvjing.footer {
+        padding: 40px 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
