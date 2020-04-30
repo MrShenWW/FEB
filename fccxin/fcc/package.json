@@ -23,7 +23,7 @@
     "dplayer": "^1.25.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "vue-awesome-swiper": "^3.1.3",
