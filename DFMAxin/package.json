@@ -20,7 +20,7 @@
     "@vue/eslint-config-prettier": "^4.0.1",
     "animate.css": "^3.7.2",
     "babel-eslint": "^10.0.1",
-    "dplayer": "^1.25.0",
+    "dplayer": "^1.27.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "jquery": "^3.4.1",
